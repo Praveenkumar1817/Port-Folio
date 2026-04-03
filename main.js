@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (container) {
             console.log("Container found, initializing OGL");
             const renderer = new Renderer({
-                dpr: Math.min(window.devicePixelRatio || 1, 2),
+                dpr: 1, // Optimized for performance
                 alpha: true
             });
             const gl = renderer.gl;
