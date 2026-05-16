@@ -1348,14 +1348,41 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    /* Hero */
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        letter-spacing: -1px;
     }
 
-    .coding-stats {
+    .hero-subtitle {
+        font-size: 1rem;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .hero-cta {
+        display: flex;
         flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
     }
 
+    .btn-secondary {
+        margin-left: 0;
+    }
+
+    /* Section padding */
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Nav */
     .nav-links {
         position: fixed;
         top: 70px;
@@ -1368,6 +1395,7 @@ footer {
         padding-top: 2rem;
         transform: translateX(100%);
         transition: 0.3s;
+        gap: 1.5rem;
     }
 
     .nav-links.active {
@@ -1378,6 +1406,50 @@ footer {
         display: block;
     }
 
+    /* Coding stats */
+    .coding-stats {
+        flex-direction: column;
+    }
+
+    /* Coding Profiles */
+    .full-width-stats {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        min-width: unset;
+        width: 100%;
+    }
+
+    /* Bento Grid Projects - single column */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .bento-item {
+        min-height: 280px;
+    }
+
+    /* Project tags - wrap properly */
+    .project-tags {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .project-content {
+        padding: 1.25rem;
+    }
+
+    /* Project links */
+    .project-links {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    /* Experience timeline */
     .timeline::after {
         left: 0;
     }
@@ -1389,6 +1461,40 @@ footer {
 
     .timeline-dot {
         left: -7px;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skills-bento {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-card-wide {
+        grid-column: 1;
+    }
+
+    .skill-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .skill-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .skill-badge {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .skill-badge-highlight {
+        padding: 0.8rem 1.2rem;
     }
 
     /* Achievements Timeline Mobile */
@@ -1424,32 +1530,49 @@ footer {
         display: none;
     }
 
-    /* Skills Section Mobile */
-    .skills-bento {
+    /* Certs */
+    .cert-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.1rem;
     }
 
-    .skill-card-wide {
-        grid-column: 1;
-    }
-
-    .skill-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    .skill-header h3 {
-        font-size: 1.25rem;
-    }
-
-    .skill-badge {
-        padding: 0.6rem 1rem;
+    .hero-subtitle {
         font-size: 0.85rem;
     }
 
-    .skill-badge-highlight {
-        padding: 0.8rem 1.2rem;
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .card-glass {
+        padding: 1.5rem;
+    }
+
+    .bento-item {
+        min-height: 240px;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
     }
 }
