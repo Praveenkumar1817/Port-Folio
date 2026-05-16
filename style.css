@@ -467,6 +467,11 @@ header {
     box-shadow: 0 5px 15px rgba(93, 77, 122, 0.2);
 }
 
+.github-card:hover {
+    border-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+}
+
 .stat-info {
     display: flex;
     flex-direction: column;
@@ -558,10 +563,42 @@ header {
     border: 1px solid rgba(0, 240, 255, 0.2);
 }
 
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .project-links a {
     color: var(--text-main);
     text-decoration: none;
     font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    transition: 0.2s;
+}
+
+.project-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* LC-Analyser card — LeetCode orange accent */
+.lc-analyser-card:hover {
+    border-color: rgba(255, 161, 22, 0.5) !important;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(255, 161, 22, 0.15) !important;
+}
+
+.project-tags {
+    flex-wrap: wrap;
 }
 
 /* Experience Timeline */

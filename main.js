@@ -1,4 +1,4 @@
-import { Renderer, Program, Mesh, Color, Triangle } from 'https://esm.sh/ogl';
+import { Renderer, Program, Mesh, Color, Triangle } from 'https://cdn.skypack.dev/ogl';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Main.js loaded - Initializing...");
