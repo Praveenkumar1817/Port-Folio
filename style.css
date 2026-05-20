@@ -1435,6 +1435,22 @@ footer {
         margin-left: 0;
     }
 
+    /* Resume button – hero */
+    .btn-resume {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Resume button – nav drawer */
+    .nav-resume-btn {
+        width: auto;
+        padding: 10px 24px !important;
+        border-radius: 8px;
+        font-size: 1rem;
+        justify-content: center;
+    }
+
     /* Section padding */
     .section {
         padding: 70px 0;
@@ -1637,5 +1653,16 @@ footer {
 
     .section-title {
         font-size: 1.7rem;
+    }
+
+    /* Resume button – small screens */
+    .btn-resume {
+        font-size: 0.9rem;
+        padding: 12px 24px;
+    }
+
+    .nav-resume-btn {
+        font-size: 0.9rem;
+        padding: 8px 18px !important;
     }
 }
