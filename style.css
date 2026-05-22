@@ -1438,7 +1438,7 @@ footer {
     /* Resume button – hero */
     .btn-resume {
         margin-left: 0;
-        width: 100%;
+        width: auto;
         justify-content: center;
     }
 

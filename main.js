@@ -8,7 +8,7 @@ import { Renderer, Program, Mesh, Color, Triangle } from 'https://cdn.skypack.de
 ========================================== */
 window.downloadResume = function(e) {
     if (e) e.preventDefault();
-    const fileName = 'PraveenkumarB_RESUME_NV (6).pdf';
+    const fileName = 'PraveenkumarB_Resume.pdf';
     const url = encodeURIComponent(fileName).replace(/%20/g, ' ');
 
     fetch(fileName)
