@@ -1,38 +1,6 @@
 import { Renderer, Program, Mesh, Color, Triangle } from 'https://cdn.skypack.dev/ogl';
 
-/* ==========================================
-   Resume Download (Mobile-Compatible)
-   Uses fetch → blob → programmatic click
-   so the download attribute is bypassed on
-   iOS Safari / Android Chrome which ignore it.
-========================================== */
-window.downloadResume = function(e) {
-    if (e) e.preventDefault();
-    const fileName = 'PraveenkumarB_Resume.pdf';
-    const url = encodeURIComponent(fileName).replace(/%20/g, ' ');
 
-    fetch(fileName)
-        .then(res => {
-            if (!res.ok) throw new Error('Fetch failed');
-            return res.blob();
-        })
-        .then(blob => {
-            const blobUrl = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = blobUrl;
-            a.download = 'PraveenkumarB_Resume.pdf';
-            document.body.appendChild(a);
-            a.click();
-            setTimeout(() => {
-                URL.revokeObjectURL(blobUrl);
-                a.remove();
-            }, 300);
-        })
-        .catch(() => {
-            // Fallback: open in new tab (viewer) if fetch blocked
-            window.open(fileName, '_blank');
-        });
-};
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Main.js loaded - Initializing...");
